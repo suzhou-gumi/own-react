@@ -4,13 +4,17 @@ import {
   Key,
   Ref,
   Props,
-  ReactElement,
+  ReactElementType,
   ElementType,
 } from "shared/ReactTypes";
 
 // ReactElement
-
-const ReactElement = function (type: Type, key: Key, ref: Ref, props: Props) {
+const ReactElement = function (
+  type: Type,
+  key: Key,
+  ref: Ref,
+  props: Props,
+): ReactElementType {
   const element = {
     $$typeof: REACT_ELEMENT_TYPE,
     type,
