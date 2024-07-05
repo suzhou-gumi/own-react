@@ -18,7 +18,7 @@ export default [
     output: {
       file: `${distPackagePath}/index.js`,
       name: "index.js",
-      format: "umd",
+      format: "es",
     },
     plugins: [
       ...getBaseRollupPlugins({}),
@@ -42,13 +42,13 @@ export default [
       {
         file: `${distPackagePath}/jsx-runtime.js`,
         name: "jsx-runtime.js",
-        format: "umd",
+        format: "es",
       },
       // jsx-dev-runtime
       {
         file: `${distPackagePath}/jsx-dev-runtime.js`,
         name: "jsx-dev-runtime.js",
-        format: "umd",
+        format: "es",
       },
     ],
     plugins: getBaseRollupPlugins({}),
