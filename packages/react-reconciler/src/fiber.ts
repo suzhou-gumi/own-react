@@ -21,6 +21,7 @@ export class FiberNode {
   memoizedState: any;
   alternate: FiberNode | null;
   flags: Flags;
+  subtreeFlags: Flags;
 
   updateQueue: unknown;
 
@@ -50,6 +51,7 @@ export class FiberNode {
 
     // 副作用
     this.flags = NoFlags;
+    this.subtreeFlags = NoFlags;
   }
 }
 
@@ -84,6 +86,7 @@ export const createWorkingProcess = (
     // update
     wip.pendingProps = pendingProps;
     wip.flags = NoFlags;
+    wip.subtreeFlags = NoFlags;
   }
 
   wip.type = current.type;
