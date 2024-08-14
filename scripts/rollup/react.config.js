@@ -17,8 +17,8 @@ export default [
     input: `${packagePath}/${module}`,
     output: {
       file: `${distPackagePath}/index.js`,
-      name: "index.js",
-      format: "es",
+      name: "React",
+      format: "umd",
     },
     plugins: [
       ...getBaseRollupPlugins({}),
@@ -41,14 +41,14 @@ export default [
       // jsx-runtime
       {
         file: `${distPackagePath}/jsx-runtime.js`,
-        name: "jsx-runtime.js",
-        format: "es",
+        name: "jsx-runtime",
+        format: "umd",
       },
       // jsx-dev-runtime
       {
         file: `${distPackagePath}/jsx-dev-runtime.js`,
-        name: "jsx-dev-runtime.js",
-        format: "es",
+        name: "jsx-dev-runtime",
+        format: "umd",
       },
     ],
     plugins: getBaseRollupPlugins({}),
